@@ -1,0 +1,12 @@
+#!/bin/bash
+
+## Created By Aditya Shakya
+
+MENU="$(rofi -sep "|" -dmenu -i -p 'System' -location 3 -theme "/home/andyraitra/.config/rofi/Monokai.rasi" -xoffset 0 -yoffset 23 -width 15 -hide-scrollbar -font "ubuntu 10" -line-padding 4 -padding 20 -lines 4 <<< " Lock| Logout| Reboot| Shutdown")"
+#MENU="$(rofi -sep "|" -dmenu -i -p 'System' -location 3 -xoffset 0 -yoffset 23 -width 15 -hide-scrollbar -line-padding 4 -padding 20 -lines 4 <<< " Lock| Logout| Reboot| Shutdown")"
+            case "$MENU" in
+                *Lock) i3lock-fancy ;;
+                *Logout) openbox --exit;;
+                *Reboot) systemctl reboot ;;
+                *Shutdown) systemctl -i poweroff
+            esac

@@ -1,0 +1,5 @@
+#!/bin/bash
+
+## Created By Aditya Shakya
+
+rofi -modi run,drun -show drun -line-padding 4 -columns 1 -width 29 -padding 20 -hide-scrollbar -show-icons -drun-icon-theme "Korla" -location 1 -xoffset 0 -yoffset 23 -font "Iosevka 10" -theme "/home/andyraitra/.config/rofi/Monokai.rasi" 
